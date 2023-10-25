@@ -4,13 +4,13 @@ import { UserContext } from "./context/UserContext";
 
 export const HomePage = () => {
 
-  const { user, setUser } = useContext( UserContext );
+  const { user } = useContext( UserContext );
 
-  useEffect (()=>{
-    setTimeout(()=>{
-      setUser({ id: 123, name: 'Maxi', email: 'maxi@google.com' })
-    },2000)
-  },[])
+  // useEffect (()=>{
+  //   setTimeout(()=>{
+  //     setUser({ id: 123, name: 'Maxi', email: 'maxi@google.com' })
+  //   },2000)
+  // },[])
 
     return (
       <>

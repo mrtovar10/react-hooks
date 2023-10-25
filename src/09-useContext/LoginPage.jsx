@@ -4,7 +4,12 @@ import { UserContext } from './context/UserContext';
 
 export const LoginPage = () => {
 
-    const { user, setUser } = useContext( UserContext );
+    const { setUser } = useContext( UserContext );
+    const persona = {
+        id: 123456,
+        name: 'Lucia Meyer',
+        email: 'luo@google.com'
+    }
     
     return (
       <>
@@ -12,13 +17,13 @@ export const LoginPage = () => {
           <hr />
 
           <pre>
-            { JSON.stringify( user, null, 3 ) }
+            { JSON.stringify( persona, null, 3 ) }
           </pre>
 
 
           <button 
             className="btn btn-primary"
-            onClick={ () => setUser({ id: 123, name: 'Lucia', email: 'lu@google.com' })  }
+            onClick={ () => setUser(persona)  }
           >
             Establecer usuario
           </button>
