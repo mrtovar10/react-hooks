@@ -1,11 +1,16 @@
-import { useContext } from "react"
+import { useContext, useEffect } from "react"
 import { UserContext } from "./context/UserContext";
 
 
 export const HomePage = () => {
 
-  const { user } = useContext( UserContext );
+  const { user, setUser } = useContext( UserContext );
 
+  useEffect (()=>{
+    setTimeout(()=>{
+      setUser({ id: 123, name: 'Maxi', email: 'maxi@google.com' })
+    },2000)
+  },[])
 
     return (
       <>
