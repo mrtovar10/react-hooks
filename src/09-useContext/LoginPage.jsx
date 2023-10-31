@@ -10,7 +10,7 @@ export const LoginPage = () => {
         name: 'Lucia Meyer',
         email: 'luo@google.com'
     }
-    
+    console.log('logiiiin')
     return (
       <>
           <h1>LoginPage</h1>
